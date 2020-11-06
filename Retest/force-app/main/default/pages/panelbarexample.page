@@ -1,0 +1,8 @@
+<apex:page >
+<apex:toolbar itemSeparator="Black line" >
+<apex:toolbarGroup itemSeparator="line" >
+<apex:outputlink value="https://adidas.com">abc</apex:outputLink>
+<apex:outputlink value="https://adidas.com">def</apex:outputLink>
+</apex:toolbarGroup>
+</apex:toolbar>
+</apex:page>

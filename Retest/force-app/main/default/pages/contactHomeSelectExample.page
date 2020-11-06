@@ -1,0 +1,36 @@
+<apex:page standardController="Contact" recordSetVar="Conts" >
+<apex:form >
+ <apex:sectionHeader title="Contacts" subtitle="Home"/>
+ <apex:outputText > <b>View:</b> </apex:outputText>
+    
+    <apex:selectList value="{!filterId}" size="1" id="ab">
+       <apex:selectOptions value="{!listviewoptions}" />
+    </apex:selectList>
+     
+    <apex:pageBlock title="Recent Contacts">
+       <apex:pageBlockButtons location="top">
+          
+           <apex:commandButton value="new" action="{!create}"/>
+       
+       <span style="float:right">
+       
+       <apex:selectList value="{!filterId}" size="1">
+           <apex:selectOption itemLabel="Recently Viewed" itemValue="RV"/>
+           <apex:selectOption itemLabel="Recently Modified" itemValue="RM"/>
+           <apex:selectOption itemLabel="Recently Created" itemValue="RC"/>
+           
+         
+       </apex:selectList>
+       </span> 
+       </apex:pageBlockButtons>
+               <apex:pageBlockTable value="{!Conts}" var="con">
+                   <apex:column value="{!Con.Name}"/>
+                   <apex:column value="{!Con.Phone}"/>
+                   <apex:column value="{!Con.Email}"/>
+               
+               
+               </apex:pageBlockTable>
+       
+    </apex:pageBlock>   
+</apex:form>
+</apex:page>

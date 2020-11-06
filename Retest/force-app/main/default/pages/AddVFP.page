@@ -1,0 +1,22 @@
+<apex:page controller="AddNumbers">
+  <apex:form >
+      <apex:pageBlock title="Add Numbers" id="Calc">
+        <apex:pageBlockSection columns="1" >
+            <apex:inputText value="{!Num1}" label="Number 1"/>
+            <apex:inputText value="{!Num2}" label="Number 2"/>
+            <apex:outputText label="Result" value="{!Res}" ></apex:outputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+            <apex:commandButton value="add" action="{!addNums}" reRender="Calc"/>
+            <apex:commandButton value="sub " action="{!subNums}" reRender="Calc"/>
+            <apex:commandButton value="mul" action="{!mulNums}" reRender="Calc"/>
+            <apex:commandButton value="div" action="{!divNums}" reRender="Calc"/>
+            
+            </apex:pageBlockButtons>
+            
+        
+        
+          
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

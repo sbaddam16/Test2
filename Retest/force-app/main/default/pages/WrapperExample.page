@@ -1,0 +1,24 @@
+<apex:page controller="SaveAccounts" >
+  <apex:form >
+    <apex:pageBlock title="AccountsSave">
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+            <apex:outputText value="Account Name"/>
+            <apex:inputText value="{!accName}"/>
+            
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputText value="Account Type"/>
+            <apex:inputText value="{!accType}"/>
+            
+            </apex:pageBlockSectionItem>
+          
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveaccount}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

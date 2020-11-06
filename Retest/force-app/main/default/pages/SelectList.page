@@ -1,0 +1,32 @@
+<apex:page standardController="Account" recordSetVar="Acts" >
+<apex:form >
+<apex:sectionHeader title="Accounts" subtitle="Homepage"/>
+<apex:outputText ><b> View: </b></apex:outputText>
+<apex:selectList value="{!filterId}" size="1">
+<apex:selectOptions value="{!listViewOptions}"/>
+<apex:actionSupport event="onchange" reRender="pb"/>
+</apex:selectList>
+    <apex:pageBlock title="Recent Accounts" id="pb">
+        <apex:pageBlockButtons location="top">
+         <apex:commandButton action="{!create}" value="new"/>   
+        
+        <span style="float:right">
+        <apex:selectList size="1"  >
+            <apex:selectOption itemLabel="Recently Viewed" itemValue="RV"/>
+            <apex:selectOption itemLabel="Recently Modified" itemValue="RM"/>
+            <apex:selectOption itemLabel="Recently Created" itemValue="RC"/>
+        
+        </apex:selectList>
+        </span>
+        </apex:pageBlockButtons>
+                <apex:pageBlockTable value="{!Acts}" var="act" rows="10">
+                <apex:column value="{!Act.Name}"/>
+                <apex:column value="{!Act.Type}"/>
+                <apex:column value="{!Act.Industry}"/>
+                
+                </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+
+</apex:form>
+</apex:page>

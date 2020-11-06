@@ -1,0 +1,31 @@
+<apex:page controller="Wrapper2Example">
+<apex:form >
+
+<apex:pageBlock title="Wrapper Records">
+<apex:pageBlockTable value="{!accountwrapperlist}" var="WL">
+<apex:column headerValue="Select">
+<apex:inputCheckbox value="{!WL.isChecked}"/>
+</apex:column>
+<apex:column value="{!WL.accountName}" headerValue="Account Name"/>
+<apex:column value="{!WL.accountType}" headerValue="Account Type"/>
+</apex:pageBlockTable>
+<apex:pageBlockButtons Location="top">
+<apex:commandButton value="Display Selected Records" action="{!selectedrecords}" reRender="SelectedBlock"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>  
+
+<apex:pageBlock title="Selected Records" id="SelectedBlock">
+<apex:pageBlockTable value="{!accountselectedlist}" var="SR">
+<apex:column value="{!SR.accountName}" headerValue="Account Name"/>
+<apex:column value="{!SR.accountType}" headerValue="Account Type"/>
+
+
+</apex:pageBlockTable>
+
+
+
+</apex:pageBlock>
+
+
+</apex:form>  
+</apex:page>

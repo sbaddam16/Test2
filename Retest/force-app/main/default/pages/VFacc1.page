@@ -1,0 +1,17 @@
+<apex:page standardController="Account">
+ 
+    <apex:pageBlock title="My Content">
+ 
+        <apex:pageBlockTable value="{!Account}" var="row">
+ 
+            <apex:column value="{!row.Name}"/>
+            <apex:column value="{!row.Phone}"/>
+            <apex:column value="{!row.Website}"/>
+            <apex:column value="{!row.Fax}"/>
+            
+ 
+        </apex:pageBlockTable>
+ 
+    </apex:pageBlock>
+ 
+</apex:page>

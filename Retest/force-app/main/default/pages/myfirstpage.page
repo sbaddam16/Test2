@@ -1,0 +1,14 @@
+<apex:page standardController="Course__c" >
+
+
+<apex:pageBlock title="Products" helpTitle="Help" helpUrl="www.adidas.com" >
+<apex:pageBlockSection >
+Major: {!Course__c.Major__c}<br/>
+Name: {!Course__c.Name}
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+
+
+</apex:page>

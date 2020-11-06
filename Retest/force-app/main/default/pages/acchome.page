@@ -1,0 +1,60 @@
+<apex:page standardController="Account">
+
+<apex:sectionHeader title="Account Edit" subtitle="New Account"/>
+<apex:form >
+<apex:pageBlock title="Account Edit" tabStyle="Account" helpTitle="Help for this page" helpUrl="https://help.salesforce.com/articleView?err=1&id=accounts_manage.htm&type=5" mode="edit">
+<apex:pageBlockSection title="Account Information" columns="2"  >
+<apex:inputfield value="{!Account.OwnerId}"/>
+<apex:inputfield value="{!Account.Name}"/>
+
+
+<apex:inputfield value="{!Account.Type}"/>
+<apex:inputfield value="{!Account.AccountNumber}"/>
+<apex:inputfield value="{!Account.Site}"/>
+<apex:inputfield value="{!Account.Industry}"/>
+<apex:inputfield value="{!Account.AnnualRevenue}"/>
+<apex:inputfield value="{!Account.Rating}"/>
+<apex:inputfield value="{!Account.Phone}"/>
+<apex:inputfield value="{!Account.Fax}"/>
+<apex:inputfield value="{!Account.Website}"/>
+<apex:inputfield value="{!Account.TickerSymbol}"/>
+<apex:inputfield value="{!Account.Ownership}"/>
+<apex:inputfield value="{!Account.NumberOfEmployees}"/>
+<apex:inputfield value="{!Account.Sic}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Address Information" columns="2"  >
+<apex:inputTextarea label="Billing Street"/>
+<apex:inputTextarea label="Shipping Street"/>
+<apex:inputText label="Billing City"/>
+<apex:inputText label="Shipping City"/>
+<apex:inputText label="Billing State/Province"/>
+<apex:inputText label="Shipping State/Province"/>
+<apex:inputText label="Billing Zip/Postal Code"/>
+<apex:inputText label="Shipping Zip/Postal Code"/>
+<apex:inputText label="Billing Country"/>
+<apex:inputText label="Shipping Country"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Additional Information" columns="2">
+<apex:inputField value="{!Account.CustomerPriority__c}"/>
+<apex:inputField value="{!Account.SLA__c}"/>
+<apex:inputField value="{!Account.SLAExpirationDate__c}"/>
+<apex:inputField value="{!Account.SLASerialNumber__c}"/>
+<apex:inputField value="{!Account.NumberofLocations__c}"/>
+<apex:inputField value="{!Account.UpsellOpportunity__c}"/>
+<apex:inputField value="{!Account.Active__c}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Description Information" >
+<apex:inputField value="{!Account.Description}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons >
+<apex:commandButton action="{!Save}" value="Save"/>
+<apex:commandButton action="{!QuickSave}" value="Save and New"/>
+<apex:commandButton action="{!Cancel}" value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
